@@ -1,874 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hariprakash Baskar - Resume</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <style>
-    @page {
-      size: A4 portrait;
-      margin: 0;
-    }
-    * {
-      box-sizing: border-box;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background: #e2e8f0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 8.65pt;
-      line-height: 1.35;
-      color: #0f172a;
-    }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hariprakash Baskar — Assistant Manager, Quality Engineering, Test Automation, Claude AI Architecture and Capital Markets IT.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Hariprakash Baskar | Assistant Manager & AI-Driven Quality Engineering</title>
 
-    .page {
-      width: 210mm;
-      height: 297mm;
-      margin: 0 auto 10mm auto;
-      background: #ffffff;
-      display: grid;
-      grid-template-columns: 32% 68%;
-      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.18);
-      overflow: hidden;
-      page-break-after: always;
-      position: relative;
-    }
+  <!-- Free CDN dependencies: perfect for GitHub Pages / Netlify / Cloudflare Pages -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    @media print {
-      body { background: transparent; }
-      .page {
-        margin: 0;
-        box-shadow: none;
-        width: 210mm;
-        height: 297mm;
-        page-break-after: always;
-      }
-    }
-
-    /* LEFT SIDEBAR */
-    .sidebar {
-      background: linear-gradient(180deg, #090e1a 0%, #0d1627 50%, #0b1220 100%);
-      color: #f1f5f9;
-      padding: 13mm 11mm 12mm 12mm;
-      display: flex;
-      flex-direction: column;
-      gap: 10pt;
-      border-right: 1.5pt solid #1e293b;
-      position: relative;
-    }
-
-    .sidebar::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 140px;
-      height: 140px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(11, 19, 41, 0) 70%);
-      pointer-events: none;
-    }
-
-    .avatar-card {
-      display: flex;
-      align-items: center;
-      gap: 9pt;
-      background: rgba(255, 255, 255, 0.03);
-      border: 0.75pt solid rgba(56, 189, 248, 0.2);
-      border-radius: 8px;
-      padding: 6pt 8pt;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    }
-    .brand-mark {
-      width: 32pt;
-      height: 32pt;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-      color: #ffffff;
-      font-weight: 900;
-      font-size: 13pt;
-      letter-spacing: -0.5px;
-      border-radius: 7px;
-      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.45);
-      flex-shrink: 0;
-    }
-    .avatar-text strong {
-      display: block;
-      font-size: 8.8pt;
-      color: #f8fafc;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-    }
-    .avatar-text span {
-      display: block;
-      font-size: 6.9pt;
-      color: #38bdf8;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    .sidebar h3 {
-      font-size: 8.5pt;
-      font-weight: 800;
-      letter-spacing: 1.1px;
-      text-transform: uppercase;
-      color: #38bdf8;
-      margin: 0 0 5pt 0;
-      padding-bottom: 3pt;
-      border-bottom: 0.75pt solid rgba(56, 189, 248, 0.25);
-      display: flex;
-      align-items: center;
-      gap: 4pt;
-    }
-    .sidebar h3 i {
-      font-size: 9pt;
-      color: #38bdf8;
-    }
-
-    .contact-card {
-      background: rgba(255, 255, 255, 0.025);
-      border: 0.5pt solid rgba(148, 163, 184, 0.15);
-      border-radius: 6px;
-      padding: 5pt 6pt;
-      display: flex;
-      flex-direction: column;
-      gap: 4.5pt;
-    }
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 6.5pt;
-      font-size: 7.7pt;
-      color: #cbd5e1;
-    }
-    .contact-icon {
-      width: 17pt;
-      height: 17pt;
-      border-radius: 4px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 0.5pt solid rgba(56, 189, 248, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #38bdf8;
-      font-size: 7.8pt;
-      flex-shrink: 0;
-    }
-    .contact-detail {
-      line-height: 1.18;
-      word-break: break-all;
-    }
-    .contact-detail .lbl {
-      display: block;
-      font-size: 6.1pt;
-      color: #64748b;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    .contact-detail a {
-      color: #e2e8f0;
-      text-decoration: none;
-    }
-
-    .pr-chip {
-      background: linear-gradient(90deg, rgba(2, 132, 199, 0.15) 0%, rgba(56, 189, 248, 0.08) 100%);
-      border: 0.75pt solid #0284c7;
-      border-radius: 5px;
-      padding: 4.5pt 6pt;
-      display: flex;
-      align-items: center;
-      gap: 5pt;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-    .pr-chip i {
-      font-size: 11pt;
-      color: #38bdf8;
-    }
-    .pr-chip div {
-      line-height: 1.15;
-    }
-    .pr-chip strong {
-      display: block;
-      color: #f8fafc;
-      font-size: 7.2pt;
-      letter-spacing: 0.2px;
-    }
-    .pr-chip span {
-      color: #38bdf8;
-      font-size: 6.6pt;
-      font-weight: 600;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5pt;
-    }
-    .metric-box {
-      background: rgba(255, 255, 255, 0.03);
-      border: 0.5pt solid rgba(56, 189, 248, 0.2);
-      border-radius: 6px;
-      padding: 4.5pt 3pt;
-      text-align: center;
-      box-shadow: inset 0 0 8pt rgba(2, 132, 199, 0.08);
-    }
-    .metric-box .num {
-      font-size: 13pt;
-      font-weight: 900;
-      background: linear-gradient(135deg, #38bdf8 0%, #a5f3fc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-    }
-    .metric-box .label {
-      font-size: 6.2pt;
-      color: #94a3b8;
-      margin-top: 2pt;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
-    }
-
-    .tech-panel {
-      background: rgba(255, 255, 255, 0.02);
-      border: 0.5pt solid rgba(148, 163, 184, 0.12);
-      border-left: 2pt solid #0284c7;
-      border-radius: 4px;
-      padding: 4.5pt 5.5pt;
-      margin-bottom: 5pt;
-    }
-    .tech-panel h4 {
-      margin: 0 0 3pt 0;
-      font-size: 7.5pt;
-      font-weight: 800;
-      color: #f1f5f9;
-      display: flex;
-      align-items: center;
-      gap: 3pt;
-    }
-    .tech-panel h4 i {
-      color: #38bdf8;
-      font-size: 7.2pt;
-    }
-    .pill-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5pt;
-    }
-    .pill {
-      background: rgba(56, 189, 248, 0.08);
-      border: 0.5pt solid rgba(56, 189, 248, 0.25);
-      color: #e0f2fe;
-      font-size: 6.6pt;
-      font-weight: 600;
-      padding: 1pt 3.8pt;
-      border-radius: 3px;
-      line-height: 1.25;
-    }
-    .pill.hot {
-      background: rgba(2, 132, 199, 0.35);
-      border-color: #38bdf8;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .glass-card-item {
-      background: rgba(255, 255, 255, 0.025);
-      border: 0.5pt solid rgba(148, 163, 184, 0.15);
-      border-radius: 5px;
-      padding: 4pt 5.5pt;
-      margin-bottom: 4pt;
-      display: flex;
-      gap: 5.5pt;
-    }
-    .glass-card-icon {
-      color: #38bdf8;
-      font-size: 10.5pt;
-      line-height: 1;
-      padding-top: 1pt;
-    }
-    .glass-card-text {
-      line-height: 1.2;
-    }
-    .glass-card-text strong {
-      display: block;
-      font-size: 7.5pt;
-      color: #f8fafc;
-      font-weight: 700;
-    }
-    .glass-card-text p {
-      margin: 1pt 0 0 0;
-      font-size: 6.8pt;
-      color: #94a3b8;
-    }
-    .glass-card-text .date-tag {
-      display: inline-block;
-      font-size: 6.1pt;
-      font-weight: 700;
-      color: #38bdf8;
-      margin-top: 1.5pt;
-      text-transform: uppercase;
-    }
-
-    /* RIGHT MAIN CONTENT */
-    .main {
-      padding: 14mm 15mm 12mm 15mm;
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-    }
-
-    .header-block {
-      border-bottom: 1.5pt solid #e2e8f0;
-      padding-bottom: 8pt;
-      margin-bottom: 9pt;
-    }
-    .header-block h1 {
-      margin: 0;
-      font-size: 20.5pt;
-      font-weight: 900;
-      color: #090e1a;
-      letter-spacing: -0.5px;
-      line-height: 1.05;
-    }
-    .header-block .subtitle {
-      font-size: 9.2pt;
-      font-weight: 800;
-      color: #0284c7;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-top: 3pt;
-      display: flex;
-      align-items: center;
-      gap: 4.5pt;
-    }
-
-    .section-title {
-      font-size: 9.4pt;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: #090e1a;
-      border-bottom: 1.2pt solid #0284c7;
-      padding-bottom: 2pt;
-      margin: 0 0 7pt 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .section-title .accent-tag {
-      font-size: 6.8pt;
-      font-weight: 700;
-      color: #64748b;
-      letter-spacing: 0.2px;
-    }
-
-    .summary-text {
-      font-size: 8.2pt;
-      color: #334155;
-      line-height: 1.36;
-      margin: 0 0 9.5pt 0;
-      text-align: justify;
-    }
-
-    .experience-block {
-      margin-bottom: 9pt;
-    }
-    .role-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1pt;
-    }
-    .role-title {
-      font-size: 9.1pt;
-      font-weight: 800;
-      color: #090e1a;
-    }
-    .role-date {
-      font-size: 7.5pt;
-      font-weight: 800;
-      color: #0284c7;
-      white-space: nowrap;
-    }
-    .company-sub {
-      font-size: 8pt;
-      font-weight: 600;
-      color: #475569;
-      margin-bottom: 3pt;
-      display: flex;
-      justify-content: space-between;
-    }
-    .company-sub .loc {
-      font-style: italic;
-      font-weight: 400;
-      color: #64748b;
-    }
-
-    .tech-stack-tag {
-      display: inline-block;
-      background: #f0f9ff;
-      border: 0.5pt solid #bae6fd;
-      border-left: 2.5pt solid #0284c7;
-      padding: 1.5pt 5pt;
-      font-size: 6.9pt;
-      color: #0369a1;
-      font-weight: 700;
-      margin-bottom: 3.5pt;
-      border-radius: 0 3px 3px 0;
-    }
-
-    .resp-list {
-      margin: 0;
-      padding-left: 11pt;
-    }
-    .resp-list li {
-      font-size: 8pt;
-      color: #334155;
-      line-height: 1.3;
-      margin-bottom: 2.8pt;
-      text-align: justify;
-    }
-    .resp-list li strong {
-      color: #0f172a;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6.5pt;
-      margin-bottom: 8pt;
-    }
-    .project-card {
-      background: #f8fafc;
-      border: 0.75pt solid #e2e8f0;
-      border-top: 2.5pt solid #0284c7;
-      border-radius: 4px;
-      padding: 5pt 6.5pt;
-    }
-    .project-card h5 {
-      margin: 0 0 1.5pt 0;
-      font-size: 8.2pt;
-      font-weight: 800;
-      color: #090e1a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .project-card .cat {
-      font-size: 6.5pt;
-      font-weight: 800;
-      color: #0284c7;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-    }
-    .project-card p {
-      margin: 0;
-      font-size: 7.2pt;
-      color: #475569;
-      line-height: 1.25;
-    }
-
-    .footer-stamp {
-      margin-top: auto;
-      padding-top: 4pt;
-      border-top: 0.5pt solid #e2e8f0;
-      display: flex;
-      justify-content: space-between;
-      font-size: 6.8pt;
-      color: #94a3b8;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- PAGE 1 -->
-  <div class="page">
-    
-    <aside class="sidebar">
-      <div class="avatar-card">
-        <div class="brand-mark">HB</div>
-        <div class="avatar-text">
-          <strong>Hariprakash Baskar</strong>
-          <span>Claude Architect · QE Lead</span>
+  <div class="cursor-glow"></div>
+  <div class="bg-grid"></div>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">
+        <span class="brand-mark">HB</span> Hariprakash<span class="brand-dot">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm px-3" href="#contact">Let's Connect <i class="bi bi-arrow-up-right"></i></a></li>
+          <li class="nav-item">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero-section">
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-100 py-5">
+        <div class="col-lg-8">
+          <div class="eyebrow reveal">
+            <span class="status-dot"></span> ASSISTANT MANAGER · CLAUDE ARCHITECT · CAPITAL MARKETS QE
+          </div>
+
+          <h1 class="hero-title reveal delay-1">
+             <span class="old-title">QA Lead</span><br>
+             <span class="gradient-text">Automation & AI Testing</span>
+          </h1>
+
+          <p class="hero-copy reveal delay-2">
+            I'm <strong>Hariprakash Baskar</strong> — Assistant Manager specializing in Automation and AI-Driven Testing with 8+ years of experience
+            across Capital Markets, Banking, and Life Sciences. Certified Claude Architect focused on client-to-exchange transaction quality,
+            FIX protocol automation, and autonomous QA agent ecosystems.
+          </p>
+
+          <div class="hero-actions reveal delay-3">
+            <a href="#experience" class="btn btn-primary btn-lg">Explore My Journey <i class="bi bi-arrow-down-right"></i></a>
+            <a href="assets/Hariprakash_Baskar_Resume.pdf" class="btn btn-outline-light btn-lg" download>
+              <i class="bi bi-download"></i> Download Resume
+            </a>
+          </div>
+
+          <div class="hero-metrics reveal delay-4">
+            <div><strong>8+</strong><span>Years Experience</span></div>
+            <div><strong>4</strong><span>Years Onsite</span></div>
+            <div><strong>3</strong><span>Core Domains</span></div>
+            <div><strong>15+</strong><span>QE Technologies</span></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="hero-orbit reveal delay-2">
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+            <div class="hero-avatar">
+              <span>HB</span>
+              <small>QE</small>
+            </div>
+            <div class="float-card card-ai"><i class="bi bi-cpu"></i> Claude Architect</div>
+            <div class="float-card card-api"><i class="bi bi-diagram-2"></i> FIX Protocol</div>
+            <div class="float-card card-lead"><i class="bi bi-people"></i> Leadership</div>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="scroll-cue"><span></span> Scroll to explore</div>
+  </header>
 
-      <div>
-        <h3><i class="bi bi-person-lines-fill"></i> Connectivity</h3>
-        <div class="contact-card">
-          <div class="contact-row">
-            <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
-            <div class="contact-detail">
-              <span class="lbl">Location</span>
-              Bengaluru, Karnataka, India
+  <!-- ABOUT -->
+  <section id="about" class="section-pad">
+    <div class="container">
+      <div class="section-label">01 / PROFILE</div>
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <h2 class="section-title">Quality isn't a phase.<br><span class="gradient-text">It's an engineering mindset.</span></h2>
+        </div>
+        <div class="col-lg-7">
+          <p class="lead-copy">
+            I work at the intersection of <strong>quality engineering, automation, agentic AI, and technical leadership</strong>.
+            My focus is architecting scalable test frameworks, Claude-driven agent workflows, and resilient quality practices that help
+            teams deploy high-frequency systems and mission-critical financial workflows with absolute reliability.
+          </p>
+          <div class="highlight-grid mt-4">
+            <div class="info-card">
+              <i class="bi bi-robot"></i>
+              <h5>Claude & AI-Driven QE</h5>
+              <p>Autonomous AI agents, Claude Agent SDK, MCP, intelligent FIX protocol synthesis, and automated trade report reconciliation.</p>
+            </div>
+            <div class="info-card">
+              <i class="bi bi-diagram-3"></i>
+              <h5>Framework Engineering</h5>
+              <p>Scalable automation, exchange connectivity validation, high-throughput API testing, CI/CD, and robust test architecture.</p>
+            </div>
+            <div class="info-card">
+              <i class="bi bi-person-workspace"></i>
+              <h5>Engineering Leadership</h5>
+              <p>Cross-functional team mentoring, stakeholder management, delivery ownership, and QA governance.</p>
+            </div>
+            <div class="info-card">
+              <i class="bi bi-bank"></i>
+              <h5>Capital Markets & Banking</h5>
+              <p>End-to-end client-to-exchange workflows, risk-based testing, regulatory validation (CSV/GxP), and release readiness.</p>
             </div>
           </div>
-          <div class="contact-row">
-            <div class="contact-icon"><i class="bi bi-envelope-at-fill"></i></div>
-            <div class="contact-detail">
-              <span class="lbl">Direct Email</span>
-              <a href="mailto:hariprakashbaskar96@gmail.com">hariprakashbaskar96@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section-pad section-alt">
+    <div class="container">
+      <div class="section-label">02 / EXPERIENCE</div>
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <h2 class="section-title mb-0">Career <span class="gradient-text">timeline.</span></h2>
+        <span class="mini-badge"><i class="bi bi-briefcase"></i> Assistant Manager · Capital Markets QE</span>
+      </div>
+
+      <div class="timeline">
+        <!-- BNP PARIBAS -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card featured">
+            <div class="timeline-top">
+              <span class="period">SEP 2026 — PRESENT</span>
+              <span class="role-badge">CURRENT</span>
+            </div>
+            <h3>Assistant Manager – Automation and AI Driven Testing</h3>
+            <h6>BNP Paribas · Global Markets IT</h6>
+            <p>Leading end-to-end automation and AI-driven quality engineering for Capital Markets systems, covering the entire lifecycle from client order placement to exchange execution. Architecting AI agents to synthesize and validate FIX protocols, automate order routing scenarios, and autonomously extract, compare, and publish trade execution reports.</p>
+            <div class="tag-row">
+              <span>Capital Markets</span><span>FIX Protocol</span><span>AI Agents</span><span>Order Placement</span><span>Report Automation</span><span>E2E Exchange Flow</span>
             </div>
           </div>
-          <div class="contact-row">
-            <div class="contact-icon"><i class="bi bi-telephone-outbound-fill"></i></div>
-            <div class="contact-detail">
-              <span class="lbl">Mobile</span>
-              +91 75980 46021
+        </article>
+
+        <!-- ASCENDION -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <span class="period">FEB 2024 — AUG 2026</span>
+            </div>
+            <h3>QA Lead</h3>
+            <h6>Ascendion Engineering</h6>
+            <p>Quality engineering leadership across enterprise banking applications, with ownership spanning automation, microservices validation, delivery quality, and engineering practices.</p>
+            <div class="tag-row">
+              <span>QA Leadership</span><span>Automation</span><span>CI/CD</span><span>AI in QE</span><span>API Testing</span>
             </div>
           </div>
-          <div class="contact-row">
-            <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
-            <div class="contact-detail">
-              <span class="lbl">Professional Network</span>
-              <a href="https://www.linkedin.com/in/hariprakash-baskar-265954269/">in/hariprakash-baskar</a>
+        </article>
+
+        <!-- BAYSHORE ENTERPRISE -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top"><span class="period">OCT 2022 — FEB 2024</span></div>
+            <h3>QA Project Manager</h3>
+            <h6>Bayshore · Enterprise Systems Division</h6>
+            <p>Led QA activities for enterprise CRM / Dynamics 365 migration, RPA, and automation initiatives; handled test planning, Agile delivery, defect triage, and performance profiling.</p>
+            <div class="tag-row"><span>UiPath</span><span>Jira</span><span>Zephyr</span><span>JMeter</span><span>Dynamics 365</span></div>
+          </div>
+        </article>
+
+        <!-- COGNIZANT LEAD -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top"><span class="period">OCT 2021 — OCT 2022</span></div>
+            <h3>Technical Lead / Validation Lead</h3>
+            <h6>Cognizant Technology Solutions</h6>
+            <p>Led offshore QA teams for Banking and Life Sciences solutions and validation activities for enterprise CRM, including test strategy, traceability, UAT/SIT execution, and CSV/GxP compliance.</p>
+            <div class="tag-row"><span>ServiceNow</span><span>GxP</span><span>CSV</span><span>UAT</span><span>SIT</span><span>Validation</span></div>
+          </div>
+        </article>
+
+        <!-- COGNIZANT ANALYST -->
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top"><span class="period">NOV 2017 — DEC 2019</span></div>
+            <h3>Software Test Analyst</h3>
+            <h6>Cognizant Technology Solutions</h6>
+            <p>Functional, regression, and BDD testing with test automation, defect management, and Agile delivery across banking and financial platforms.</p>
+            <div class="tag-row"><span>Selenium</span><span>Cucumber</span><span>HP ALM</span><span>QTP</span><span>Jira</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-pad">
+    <div class="container">
+      <div class="section-label">03 / TOOLKIT</div>
+      <h2 class="section-title mb-5">My <span class="gradient-text">engineering toolkit.</span></h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="skill-panel">
+            <div class="skill-head"><i class="bi bi-code-slash"></i><div><h5>Automation & Capital Markets</h5><span>Frameworks & Exchange Protocols</span></div></div>
+            <div class="skill-cloud">
+              <span class="skill-pill hot">FIX Protocol</span><span class="skill-pill hot">Playwright</span><span class="skill-pill">Python</span>
+              <span class="skill-pill">Pytest</span><span class="skill-pill">REST API</span><span class="skill-pill">Selenium</span>
+              <span class="skill-pill">BDD / Cucumber</span><span class="skill-pill">JMeter</span><span class="skill-pill">UiPath Test Suite</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="skill-panel">
+            <div class="skill-head"><i class="bi bi-infinity"></i><div><h5>DevOps & Delivery</h5><span>Continuous quality</span></div></div>
+            <div class="skill-cloud">
+              <span class="skill-pill">GitHub</span><span class="skill-pill">GitHub Actions</span><span class="skill-pill">Azure DevOps</span>
+              <span class="skill-pill">Jenkins</span><span class="skill-pill">Jira</span><span class="skill-pill">Xray</span>
+              <span class="skill-pill">Zephyr</span><span class="skill-pill">Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="skill-panel">
+            <div class="skill-head"><i class="bi bi-stars"></i><div><h5>Claude & AI Engineering</h5><span>Intelligent workflows & agents</span></div></div>
+            <div class="skill-cloud">
+              <span class="skill-pill hot">Claude Agent SDK</span><span class="skill-pill hot">MCP Servers</span><span class="skill-pill">Generative AI</span>
+              <span class="skill-pill">AI Report Analytics</span><span class="skill-pill">FIX Message Synthesis</span><span class="skill-pill">Regression Optimization</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="skill-panel">
+            <div class="skill-head"><i class="bi bi-people"></i><div><h5>Leadership & Governance</h5><span>Delivery + regulatory audit</span></div></div>
+            <div class="skill-cloud">
+              <span class="skill-pill hot">Capital Markets IT</span><span class="skill-pill">CSV / GxP Audits</span><span class="skill-pill">Team Mentoring</span>
+              <span class="skill-pill">Stakeholder Management</span><span class="skill-pill">Order Lifecycle QA</span><span class="skill-pill">Test Strategy</span>
+              <span class="skill-pill">Release Readiness</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="pr-chip">
-        <i class="bi bi-shield-check"></i>
-        <div>
-          <strong>Canadian Permanent Resident</strong>
-          <span>4+ Years North American Onsite Delivery</span>
-        </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="section-pad section-alt">
+    <div class="container">
+      <div class="section-label">04 / SELECTED WORK</div>
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8"><h2 class="section-title mb-0">Building the future of <span class="gradient-text">quality.</span></h2></div>
+        <div class="col-lg-4"><p class="muted mb-0 mt-3 mt-lg-0">A few examples of AI, automation and engineering initiatives.</p></div>
       </div>
 
-      <div>
-        <h3><i class="bi bi-graph-up-arrow"></i> Engineering Scope</h3>
-        <div class="metric-grid">
-          <div class="metric-box">
-            <div class="num">8+</div>
-            <div class="label">Years Exp.</div>
-          </div>
-          <div class="metric-box">
-            <div class="num">3</div>
-            <div class="label">Core Domains</div>
-          </div>
-          <div class="metric-box">
-            <div class="num">100%</div>
-            <div class="label">Audit RTM</div>
-          </div>
-          <div class="metric-box">
-            <div class="num">15+</div>
-            <div class="label">QE Stacks</div>
-          </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <article class="project-card">
+            <div class="project-icon"><i class="bi bi-cpu"></i></div>
+            <span class="project-number">01</span>
+            <h3>Agentic FIX & Order Automation</h3>
+            <p>Autonomous AI agents configured using Claude Agent SDK and MCP to construct valid FIX protocol messages, simulate client-to-exchange order placements, and validate execution flow.</p>
+            <div class="project-tags"><span>Claude AI</span><span>FIX Protocol</span><span>Capital Markets</span></div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="project-card">
+            <div class="project-icon"><i class="bi bi-file-earmark-diff"></i></div>
+            <span class="project-number">02</span>
+            <h3>AI Report Disparity Analyzer</h3>
+            <p>Automated agent system that pulls disparate financial and transaction reports, compares data sets across trading sessions, and publishes discrepancy summaries.</p>
+            <div class="project-tags"><span>Agentic QA</span><span>Analytics</span><span>Data Validation</span></div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="project-card">
+            <div class="project-icon"><i class="bi bi-funnel"></i></div>
+            <span class="project-number">03</span>
+            <h3>Test Case Optimizer</h3>
+            <p>Agentic QA concept that analyzes release notes and test repositories to prioritize relevant regression coverage and identify coverage gaps.</p>
+            <div class="project-tags"><span>Agentic QA</span><span>Regression</span><span>AI</span></div>
+          </article>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h3><i class="bi bi-stack"></i> Systems Toolkit</h3>
-        
-        <div class="tech-panel">
-          <h4><i class="bi bi-bank"></i> Capital Markets & Exchange</h4>
-          <div class="pill-cloud">
-            <span class="pill hot">FIX Protocol</span>
-            <span class="pill">Order Routing Lifecycle</span>
-            <span class="pill">Trading Gateways</span>
-            <span class="pill">Trade Reconciliation</span>
+  <!-- EDUCATION + CERTS -->
+  <section id="education" class="section-pad">
+    <div class="container">
+      <div class="section-label">05 / CREDENTIALS</div>
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">Education that shaped the <span class="gradient-text">engineer.</span></h2>
+          <div class="credential-card mt-4">
+            <div class="credential-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div><span class="period">JAN 2020 — MAY 2021</span><h4>Master's in Computer Science</h4><p>University of Guelph · Canada</p></div>
           </div>
-        </div>
-
-        <div class="tech-panel">
-          <h4><i class="bi bi-cpu-fill"></i> Claude & Agentic AI</h4>
-          <div class="pill-cloud">
-            <span class="pill hot">Claude Agent SDK</span>
-            <span class="pill hot">MCP Servers</span>
-            <span class="pill">Claude Code / Rules</span>
-            <span class="pill">GenAI Test Synthesis</span>
-            <span class="pill">NL-to-SQL Engines</span>
-          </div>
-        </div>
-
-        <div class="tech-panel">
-          <h4><i class="bi bi-terminal"></i> Framework Architecture</h4>
-          <div class="pill-cloud">
-            <span class="pill hot">Playwright Python</span>
-            <span class="pill">Pytest</span>
-            <span class="pill">Selenium Java</span>
-            <span class="pill">Cucumber BDD</span>
-            <span class="pill">TestNG</span>
-            <span class="pill">POM</span>
+          <div class="credential-card">
+            <div class="credential-icon"><i class="bi bi-mortarboard"></i></div>
+            <div><span class="period">AUG 2013 — MAY 2017</span><h4>Bachelor's Degree</h4><p>Anna University · India</p></div>
           </div>
         </div>
 
-        <div class="tech-panel">
-          <h4><i class="bi bi-diagram-3-fill"></i> API, Cloud & DevOps</h4>
-          <div class="pill-cloud">
-            <span class="pill">REST Assured</span>
-            <span class="pill">Postman</span>
-            <span class="pill">GitHub Actions</span>
-            <span class="pill">Azure DevOps</span>
-            <span class="pill">Docker</span>
+        <div class="col-lg-6">
+          <h2 class="section-title">Certifications & <span class="gradient-text">credentials.</span></h2>
+          <div class="cert-grid mt-4">
+            <div class="cert-card"><i class="bi bi-cpu-fill"></i><div><strong>Anthropic Claude Certified</strong><span>Architect – Foundations (Aug 20, 2026)</span></div></div>
+            <div class="cert-card"><i class="bi bi-building"></i><div><strong>Advanced Digital Transformation</strong><span>IIM Ahmedabad (Nov 2025)</span></div></div>
+            <div class="cert-card"><i class="bi bi-stars"></i><div><strong>ISTQB Advanced AI Testing</strong><span>CT-AI (Oct 2024)</span></div></div>
+            <div class="cert-card"><i class="bi bi-patch-check-fill"></i><div><strong>PMI-PMP</strong><span>Project Management Professional (Feb 2023)</span></div></div>
+            <div class="cert-card"><i class="bi bi-patch-check-fill"></i><div><strong>ISTQB Foundation</strong><span>CTFL (May 2015)</span></div></div>
           </div>
         </div>
       </div>
-      
-    </aside>
+    </div>
+  </section>
 
-    <main class="main">
-      <div class="header-block">
-        <h1>HARIPRAKASH BASKAR</h1>
-        <div class="subtitle"><i class="bi bi-gear-wide-connected"></i> Assistant Manager – Automation, AI-Driven Testing & QE Architecture</div>
-      </div>
-
-      <div class="section-title">
-        Executive Summary
-        <span class="accent-tag">8+ Years Enterprise Experience</span>
-      </div>
-      <p class="summary-text">
-        Accomplished Quality Engineering Lead, Anthropic Claude Certified Architect, and Test Automation Architect with over 8 years of progressive experience spearheading resilient multi-platform automation frameworks, autonomous AI-driven QA agents, and continuous delivery pipelines across Capital Markets, Banking, and Life Sciences. Proven track record architecting mission-critical verification architectures from client trade routing to exchange gateways, synthesizing FIX protocol validations, and deploying autonomous report comparison agents. Expert in leading globally distributed offshore/onshore engineering teams, enforcing strict CSV/GxP compliance, and institutionalizing automated quality gating across enterprise CI/CD environments.
-      </p>
-
-      <div class="section-title">
-        Professional Experience
-        <span class="accent-tag">Leadership & Systems Engineering</span>
-      </div>
-
-      <div class="experience-block">
-        <div class="role-header">
-          <span class="role-title">Assistant Manager – Automation & AI Driven Testing</span>
-          <span class="role-date">SEP 2026 — PRESENT</span>
-        </div>
-        <div class="company-sub">
-          <span>BNP Paribas · Global Markets IT</span>
-          <span class="loc">Bengaluru, India</span>
-        </div>
-        <div class="tech-stack-tag">Stack: FIX Protocol (4.2/4.4/5.0), Python, Claude Agent SDK, MCP, Microservices, REST Assured, Trading Gateways</div>
-        <ul class="resp-list">
-          <li><strong>Client-to-Exchange Automation:</strong> Spearhead end-to-end quality engineering architecture and automated testing workflows validating high-throughput financial transactions from client order placement to exchange execution.</li>
-          <li><strong>Agentic FIX Message Generation:</strong> Architected autonomous AI testing agents leveraging Claude Agent SDK and MCP tools to dynamically parse financial specifications, construct valid FIX protocol messages, and execute automated order routing scenarios.</li>
-          <li><strong>Autonomous Disparity & Report Analysis:</strong> Built an AI agent pipeline to ingest multi-source transaction, clearing, and regulatory reports across trading sessions, executing real-time data reconciliations and flagging trade disparities automatically.</li>
-          <li><strong>Gateway & Protocol Validation:</strong> Engineered resilient test suites validating message integrity, session state recovery, tag-value parsing, order amendments, and cancel acknowledgments under strict millisecond latency SLAs.</li>
-          <li><strong>Delivery Leadership:</strong> Collaborate with front-office IT, quants, compliance analysts, and exchange integration leads to define risk-based test strategies, audit gating, and release-readiness protocols.</li>
-        </ul>
-      </div>
-
-      <div class="experience-block">
-        <div class="role-header">
-          <span class="role-title">QA Lead / Senior Quality Engineering Lead</span>
-          <span class="role-date">FEB 2024 — AUG 2026</span>
-        </div>
-        <div class="company-sub">
-          <span>Ascendion Engineering</span>
-          <span class="loc">Bengaluru, India</span>
-        </div>
-        <div class="tech-stack-tag">Stack: Playwright, Python, Pytest, Pytest-BDD, Selenium Java, REST Assured, Postman, Devin AI, GitHub Actions, Docker</div>
-        <ul class="resp-list">
-          <li><strong>Scalable Automation Framework:</strong> Architected enterprise-grade test automation suites using Playwright Python and Pytest under Page Object Model (POM) and modular wrappers, securing 100% parallel execution and cutting regression runtimes significantly.</li>
-          <li><strong>Banking Microservices Validation:</strong> Automated business-critical banking REST APIs and transaction engines using REST Assured and Postman, enforcing OAuth 2.0 authorization, payload integrity, and multi-tier database state validation.</li>
-          <li><strong>Agentic AI Testing Pipelines:</strong> Pioneered the integration of Devin AI and GenAI models to parse business specifications, conduct regression gap analysis, and synthesize predictive regression suites.</li>
-          <li><strong>CI/CD Automated Quality Gates:</strong> Embedded continuous verification gates inside GitHub Actions and Azure DevOps pipelines, enforcing Build Verification Testing (BVT) and pull-request gating to halt defective builds.</li>
-          <li><strong>Engineering Quality Governance:</strong> Directed QA strategy across engineers and product stakeholders; authored unified BDD specs via Pytest-BDD/Gherkin and standardized code review practices across the team.</li>
-        </ul>
-      </div>
-
-      <div class="footer-stamp">
-        <span>Hariprakash Baskar — Curriculum Vitae</span>
-        <span>Page 1 of 2</span>
-      </div>
-    </main>
-
-  </div>
-
-  <!-- PAGE 2 -->
-  <div class="page">
-    
-    <aside class="sidebar">
-      <div>
-        <h3><i class="bi bi-mortarboard-fill"></i> Education</h3>
-        
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-award-fill"></i></div>
-          <div class="glass-card-text">
-            <strong>Master of Engineering (M.Eng.)</strong>
-            <p>Computer Science</p>
-            <p>University of Guelph, Ontario, Canada</p>
-            <span class="date-tag">JAN 2020 — MAY 2021</span>
+  <!-- CTA -->
+  <section id="contact" class="section-pad contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="glow-ball"></div>
+        <div class="section-label">06 / CONNECT</div>
+        <div class="row align-items-center g-4 position-relative">
+          <div class="col-lg-8">
+            <h2 class="contact-title">Let's build better<br><span class="gradient-text">software together.</span></h2>
+            <p>Interested in Quality Engineering leadership, Capital Markets IT, or AI-driven automation? I'd love to connect.</p>
           </div>
-        </div>
-
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-mortarboard"></i></div>
-          <div class="glass-card-text">
-            <strong>Bachelor of Engineering (B.E.)</strong>
-            <p>Computer Science & Engineering</p>
-            <p>Anna University, Chennai, India</p>
-            <span class="date-tag">AUG 2013 — MAY 2017</span>
+          <div class="col-lg-4 text-lg-end">
+            <a class="contact-link" href="tel:+917598046021"><i class="bi bi-telephone"></i> +91 75980 46021</a>
+            <a class="contact-link" href="mailto:hariprakashbaskar96@gmail.com"><i class="bi bi-envelope"></i> Email me</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/hariprakash-baskar-265954269/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
           </div>
         </div>
       </div>
 
-      <div>
-        <h3><i class="bi bi-patch-check-fill"></i> Certifications</h3>
-        
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-cpu-fill"></i></div>
-          <div class="glass-card-text">
-            <strong>Anthropic Claude Certified</strong>
-            <p>Architect – Foundations (CCAR-F)</p>
-            <span class="date-tag">AUG 20, 2026</span>
-          </div>
-        </div>
+      <footer class="footer">
+        <span>© 2026 Hariprakash Baskar</span>
+        <span>Designed for <strong>Quality Engineering</strong>.</span>
+      </footer>
+    </div>
+  </section>
 
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-buildings-fill"></i></div>
-          <div class="glass-card-text">
-            <strong>IIM Ahmedabad</strong>
-            <p>Advanced Digital Transformation</p>
-            <span class="date-tag">NOV 2025</span>
-          </div>
-        </div>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-stars"></i></div>
-          <div class="glass-card-text">
-            <strong>ISTQB Advanced CT-AI</strong>
-            <p>Artificial Intelligence Testing</p>
-            <span class="date-tag">OCT 2024</span>
-          </div>
-        </div>
-
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-briefcase-fill"></i></div>
-          <div class="glass-card-text">
-            <strong>PMI-PMP Certified</strong>
-            <p>Project Management Professional</p>
-            <span class="date-tag">FEB 2023</span>
-          </div>
-        </div>
-
-        <div class="glass-card-item">
-          <div class="glass-card-icon"><i class="bi bi-check-circle-fill"></i></div>
-          <div class="glass-card-text">
-            <strong>ISTQB Foundation CTFL</strong>
-            <p>Software Testing</p>
-            <span class="date-tag">MAY 2015</span>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h3><i class="bi bi-shield-lock-fill"></i> QA Governance</h3>
-        
-        <div class="tech-panel">
-          <h4><i class="bi bi-signpost-split"></i> Strategy & Risk</h4>
-          <p style="margin:0; font-size:6.9pt; color:#cbd5e1; line-height:1.25;">Risk-Based Testing, Shift-Left QA, Release Readiness Gates, Master Test Plans (MTP).</p>
-        </div>
-
-        <div class="tech-panel">
-          <h4><i class="bi bi-file-earmark-check"></i> Audit & CSV</h4>
-          <p style="margin:0; font-size:6.9pt; color:#cbd5e1; line-height:1.25;">100% Pre/Post RTM Traceability, CSV & GxP Compliance, Life Sciences & Banking Audits.</p>
-        </div>
-
-        <div class="tech-panel">
-          <h4><i class="bi bi-kanban"></i> Defect Lifecycle</h4>
-          <p style="margin:0; font-size:6.9pt; color:#cbd5e1; line-height:1.25;">Root Cause Analysis (RCA), Defect Triage Boards, Jira, Xray, HP-ALM.</p>
-        </div>
-      </div>
-
-    </aside>
-
-    <main class="main">
-      
-      <div class="section-title">
-        Professional Experience (Continued)
-        <span class="accent-tag">Enterprise & Regulated Delivery</span>
-      </div>
-
-      <div class="experience-block">
-        <div class="role-header">
-          <span class="role-title">QA Project Manager / Quality Engineering Lead</span>
-          <span class="role-date">OCT 2022 — FEB 2024</span>
-        </div>
-        <div class="company-sub">
-          <span>Bayshore · Enterprise Systems Division</span>
-          <span class="loc">Mississauga, ON, Canada</span>
-        </div>
-        <div class="tech-stack-tag">Stack: Dynamics 365 CRM, Selenium Java, TestNG, UiPath Test Suite, REST API, Postman, JMeter, Jira Xray</div>
-        <ul class="resp-list">
-          <li><strong>Enterprise Dynamics 365 CRM Migration:</strong> Managed end-to-end quality governance for enterprise Dynamics 365 CRM, automated billing systems, and payment reconciliation modules, defining test strategy, resource models, and release gating.</li>
-          <li><strong>Hybrid Automation & RPA Framework:</strong> Engineered a combined test automation harness utilizing Selenium WebDriver Java (TestNG) and UiPath Test Suite to validate financial billing calculation engines, invoice workflows, and digital transaction processing.</li>
-          <li><strong>Concurrency & Performance Profiling:</strong> Executed performance, stress, and throughput load assessments via Apache JMeter, simulating high-volume concurrent transactions, isolating database locks, and optimizing API response latencies.</li>
-          <li><strong>API Integration Testing:</strong> Validated complex RESTful microservices in Postman, verifying OAuth security handshakes, schema definitions, and bidirectional database state synchronizations.</li>
-          <li><strong>Executive Quality Telemetry:</strong> Configured comprehensive dashboards in Jira Xray and UiPath Test Manager, surfacing test pass rates, defect density trends, and deployment risk vectors to leadership.</li>
-        </ul>
-      </div>
-
-      <div class="experience-block">
-        <div class="role-header">
-          <span class="role-title">Technical Lead / Systems Validation Lead</span>
-          <span class="role-date">OCT 2021 — OCT 2022</span>
-        </div>
-        <div class="company-sub">
-          <span>Cognizant Technology Solutions</span>
-          <span class="loc">Toronto, ON, Canada / Bengaluru</span>
-        </div>
-        <div class="tech-stack-tag">Stack: ServiceNow Automation, Selenium Java, REST Assured, Postman API, GxP/CSV Validation, HP-ALM</div>
-        <ul class="resp-list">
-          <li><strong>Life Sciences & Banking Delivery Governance:</strong> Directed validation lifecycles (IQ/OQ/PQ) and System Integration Testing (SIT) for ServiceNow CRM and regulated enterprise banking solutions complying with strict CSV and GxP standards.</li>
-          <li><strong>Audit Traceability:</strong> Built and maintained 100% pre- and post-execution Requirements Traceability Matrices (RTM), ensuring flawless compliance through comprehensive internal and external regulatory audits.</li>
-          <li><strong>Automated IT Service API Tests:</strong> Architected automated API suites via REST Assured and Postman to validate Incident, Change, and Audit endpoints, confirming payload schemas and authorization policies.</li>
-          <li><strong>Defect Triage & TCOE Ownership:</strong> Chaired weekly cross-functional defect triage boards with solution architects, resolved critical release blockers, and represented the Testing Center of Excellence across client reviews.</li>
-        </ul>
-      </div>
-
-      <div class="experience-block">
-        <div class="role-header">
-          <span class="role-title">Software Test Analyst / Test Engineer</span>
-          <span class="role-date">NOV 2017 — DEC 2019</span>
-        </div>
-        <div class="company-sub">
-          <span>Cognizant Technology Solutions</span>
-          <span class="loc">Chennai, India</span>
-        </div>
-        <div class="tech-stack-tag">Stack: Selenium WebDriver, Java, Cucumber BDD, REST API, Postman, Maven, JUnit, Selenium Grid, HP-ALM</div>
-        <ul class="resp-list">
-          <li><strong>BDD Test Automation:</strong> Built modular BDD test suites leveraging Selenium WebDriver, Java, Cucumber, and Maven for transaction-heavy financial and banking platforms.</li>
-          <li><strong>Distributed Grid Execution:</strong> Maintained parallel batch execution across Selenium Grid nodes, triaged environmental failures, and increased cross-browser testing speed.</li>
-          <li><strong>Functional & Boundary Verification:</strong> Authored detailed positive, negative, and edge-case test cases from functional specs; logged, tracked, and verified defect resolutions inside HP-ALM and Jira.</li>
-        </ul>
-      </div>
-
-      <div class="section-title">
-        Key Quality Innovations & Agentic Initiatives
-        <span class="accent-tag">Practical AI In QE</span>
-      </div>
-
-      <div class="project-grid">
-        <div class="project-card">
-          <h5>Agentic FIX Testing <span class="cat">Capital Markets</span></h5>
-          <p>Built autonomous agents using Claude Agent SDK and MCP to parse protocol dictionaries and generate dynamic FIX 4.2/4.4/5.0 buy/sell message sequences across exchange gateways.</p>
-        </div>
-        <div class="project-card">
-          <h5>Report Disparity Engine <span class="cat">Reconciliation</span></h5>
-          <p>Autonomous AI engine designed to compare multi-source trade confirmations and settlement feeds, highlighting field-level disparities in real-time.</p>
-        </div>
-        <div class="project-card">
-          <h5>Test Case Optimizer <span class="cat">Agentic QA</span></h5>
-          <p>Autonomous agent that parses commit diffs and release notes to dynamically generate prioritized regression suites and flag test coverage gaps.</p>
-        </div>
-        <div class="project-card">
-          <h5>NL-to-SQL Assist <span class="cat">Data Automation</span></h5>
-          <p>Natural-language utility converting plain English queries to complex SQL queries for instant backend data setup and automated database assertions.</p>
-        </div>
-      </div>
-
-      <div class="footer-stamp">
-        <span>Hariprakash Baskar — Curriculum Vitae</span>
-        <span>Page 2 of 2</span>
-      </div>
-    </main>
-
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
